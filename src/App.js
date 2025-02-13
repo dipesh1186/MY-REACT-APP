@@ -14,7 +14,10 @@ const App = () => {
 
   const handleEnvelopeClick = () => {
     if (audioRef.current) {
-      audioRef.current.play(); // Play music on envelope click
+      audioRef.current
+        .play()
+        .then(() => console.log("Audio playing..."))
+        .catch((error) => console.log("Playback failed:", error));
     }
     setStage(1);
     setTimeout(() => setStage(2), 2000);
@@ -58,7 +61,10 @@ const App = () => {
   return (
     <div className="container">
       {/* Background Music */}
-      <audio ref={audioRef} src="/background-music.wav" loop />
+      <audio ref={audioRef} loop>
+        <source src={`${process.env.PUBLIC_URL}/background-music.wav`} type="audio/wav" />
+        Your browser does not support the audio element.
+      </audio>
 
       {stage === 0 && (
         <motion.div
