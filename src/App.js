@@ -61,10 +61,8 @@ const App = () => {
   return (
     <div className="container">
       {/* Background Music */}
-      <audio ref={audioRef} loop>
-        <source src={`${process.env.PUBLIC_URL}/background-music.wav`} type="audio/wav" />
-        Your browser does not support the audio element.
-      </audio>
+      <audio ref={audioRef} src={`${process.env.PUBLIC_URL}/background-music.wav`} loop />
+      
 
       {stage === 0 && (
         <motion.div
