@@ -21,12 +21,10 @@ const App = () => {
   };
 
   const messages = [
-    "e dafol",
-    "pagal gandi",
-    // "You're the most amazing person I've ever met!",
-    " ?",
+    "You're the most amazing person I've ever met!",
+    "Your smile brightens up my darkest days!",
     "I can't imagine my life without you!",
-    "Will you be my Valentine? "
+    "Will you be my Valentine? 💖"
   ];
 
   const [currentMessage, setCurrentMessage] = useState(0);
