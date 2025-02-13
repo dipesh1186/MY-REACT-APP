@@ -58,7 +58,7 @@ const App = () => {
   return (
     <div className="container">
       {/* Background Music */}
-      <audio ref={audioRef} src="/background-music.mp3" loop />
+      <audio ref={audioRef} src="/background-music.wav" loop />
 
       {stage === 0 && (
         <motion.div
