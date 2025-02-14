@@ -93,3 +93,46 @@
     opacity: 1;
   }
 }
+
+.mobile-blocker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.mobile-blocker-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  margin: 1rem;
+  max-width: 90%;
+}
+
+.mobile-blocker-content h2 {
+  color: #ff6f91;
+  margin-bottom: 1rem;
+}
+
+.mobile-blocker-content p {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.exit-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 1rem;
+}

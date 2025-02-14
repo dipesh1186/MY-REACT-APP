@@ -2,15 +2,29 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Confetti from "react-confetti";
 import "./App.css";
+import MobileBlocker from './components/MobileBlocker';
+
+// Mobile detection function
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+};
 
 const App = () => {
   const [stage, setStage] = useState(0);
   const [runAway, setRunAway] = useState({ x: 0, y: 0 });
   const [showConfetti, setShowConfetti] = useState(false);
   const [showCongrats, setShowCongrats] = useState(false);
+  const [isMobileDevice] = useState(isMobile());
 
   // Ref for the background music
   const audioRef = useRef(null);
+
+  // If mobile device is detected, show blocker and return early
+  if (isMobileDevice) {
+    return <MobileBlocker />;
+  }
 
   const handleEnvelopeClick = () => {
     if (audioRef.current) {
@@ -123,7 +137,7 @@ const App = () => {
       {showCongrats && (
         <div className="congrats-message">
           <h1 className="congrats-heading">💖 Congratulations! 💖</h1>
-          <p className="congrats-text">You have made my day, my Valentine! 🎉</p>
+          <p className="congrats-text">You have made my day, my Valentine! ��</p>
         </div>
       )}
     </div>
