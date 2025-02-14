@@ -59,11 +59,11 @@ const App = () => {
   }, [stage, currentMessage]);
 
   const handleMouseMove = () => {
-    const xOffset = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 100 + 40);
-    const yOffset = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 100 + 40);
+    const xOffset = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 200 + 40); 
+    const yOffset = (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 200 + 40);
     setRunAway((prev) => ({
-      x: prev.x + xOffset,
-      y: prev.y + yOffset
+      x: prev.x + xOffset * 2,
+      y: prev.y + yOffset * 2
     }));
   };
 
@@ -137,7 +137,7 @@ const App = () => {
       {showCongrats && (
         <div className="congrats-message">
           <h1 className="congrats-heading">💖 Congratulations! 💖</h1>
-          <p className="congrats-text">You have made my day, my Valentine! ��</p>
+          <p className="congrats-text">You have made my day, my Valentine! 💖</p>
         </div>
       )}
     </div>
