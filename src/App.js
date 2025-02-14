@@ -38,7 +38,7 @@ const App = () => {
   };
 
   const messages = [
-    "You're the most amazing person I've ever met!",
+    "You're the most amazing person I've ever met!!!",
     "Your smile brightens up my darkest days!",
     "I can't imagine my life without you!",
     "Will you be my Valentine? 💖"
